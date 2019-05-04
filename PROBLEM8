@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int num1, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10;
+	
+	cout << "Please type a number: ";
+	cin >> num1;
+	
+	p1 = num1 * 1;
+	p2 = num1 * 2;
+	p3 = num1 * 3;
+	p4 = num1 * 4;
+	p5 = num1 * 5;
+	p6 = num1 * 6;
+	p7 = num1 * 7;
+	p8 = num1 * 8;
+	p9 = num1 * 9;
+	p10 = num1 * 10;
+	
+	cout << "Multiplication table of " << num1 << ":" << endl;
+	cout << "1 * " << num1 << " = " << p1 << endl;
+	cout << "2 * " << num1 << " = " << p2 << endl;
+	cout << "3 * " << num1 << " = " << p3 << endl;
+	cout << "4 * " << num1 << " = " << p4 << endl;
+	cout << "5 * " << num1 << " = " << p5 << endl;
+	cout << "6 * " << num1 << " = " << p6 << endl;
+	cout << "7 * " << num1 << " = " << p7 << endl;
+	cout << "8 * " << num1 << " = " << p8 << endl;
+	cout << "9 * " << num1 << " = " << p9 << endl;
+	cout << "10 * " << num1 << " = " << p10 << endl;
+	
+return 0;
+}
