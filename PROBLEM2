@@ -1,0 +1,49 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	double unpaidBalance, gallonsWater, billA, billB, billC;
+	const int demandCharge = 35;
+	const int lateCharge = 20;
+	const double consumptionCharge = 1.10;
+	
+	cout << "Please type amount of unpaid water bill: PhP ";
+	cin >> unpaidBalance;
+
+	if (unpaidBalance>0)
+	{
+		cout << "You have an unpaid water bill of PhP " << unpaidBalance << ". " << "Thus, PhP 20 will be added to your monthly bill as penalty." << endl << endl;
+		cout << "Please type gallons of water consumed: ";
+		cin >> gallonsWater;
+					
+		billA = demandCharge + (gallonsWater * consumptionCharge) + lateCharge;
+		billB = billA + unpaidBalance;			
+
+			if (gallonsWater>=0)
+			{
+				cout << "Your water bill for this month is: PhP " << billA << endl;
+				cout << "Your total water bill (including the unpaid water bill on previous months) is: PhP " << billB << endl;
+			}
+			else
+				cout << "Sorry, you have entered an invalid value. Please try again." << endl;
+	}
+	else if (unpaidBalance==0)
+	{
+		cout << "You do not have any unpaid balance, and no penalty will be added to your monthly bill." << endl << endl;
+		cout << "Please type gallons of water consumed: ";
+		cin >> gallonsWater;
+		
+		billC = demandCharge + (gallonsWater * consumptionCharge);
+		
+		if (gallonsWater>=0)		
+			cout << "Your water bill for this month is: PhP " << billC << endl;
+		else
+			cout << "Sorry, you have entered an invalid value. Please try again." << endl;
+	}
+	else if (unpaidBalance<0)
+		cout << "Sorry, you have entered an invalid value. Please try again." << endl;
+
+return 0;
+}
