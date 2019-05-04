@@ -1,0 +1,67 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int choice;
+	double hours, billA, billB;
+
+	cout << "The subscription packages are outlined below:" << endl; 
+	cout << "1. Package A:" << endl;
+	cout << "PhP 995 per month with 10 hours of Internet access. Additional hours are charged PhP 20 per hour." << endl << endl;
+	cout << "2. Package B:" << endl;
+	cout << "PhP 1495 per month with 20 hours of Internet access. Additional hours are charged PhP 10 per hour." << endl << endl;
+	cout << "3. Package C:" << endl;
+	cout << "PhP 1995 per month with unlimited Internet access." << endl << endl;
+	cout << "Please enter package number: ";
+	cin >> choice;
+	
+	if (choice==1)
+	{
+		cout << "You are subscribed to Package A." << endl << endl;
+		cout << "Please enter hours consumed: ";
+		cin >> hours;
+		
+			billA = 995 + 20 * (hours-10);
+		
+			if (hours>=0 && hours<=10)
+				cout << "Your monthly bill is: PhP 995";
+			else if (hours>10)
+				cout << "Your monthly bill is: PhP " << billA << endl;
+			else
+				cout << "Sorry, you have entered an invalid value. Please try again." << endl;
+	}
+	else if (choice==2)
+	{
+		cout << "You are subscribed to Package B." << endl << endl;
+		cout << "Please enter hours consumed: ";
+		cin >> hours;
+		
+			billB = 1495 + 10 * (hours-20);
+			
+			if (hours>=0 && hours<=20)
+				cout << "Your monthly bill is: PhP 1495";
+			else if (hours>20)
+				cout << "Your monthly bill is: PhP " << billB << endl;
+			else
+				cout << "Sorry, you have entered an invalid value. Please try again." << endl;
+	}
+	else if (choice==3)
+	{
+		cout << "You are subscribed to Package C." << endl << endl;
+		cout << "Please enter hours consumed: ";
+		cin >> hours;
+	
+			if (hours>=0)
+				cout << "Your monthly bill is: PhP 1995" << endl;
+			else
+				cout << "Sorry, you have entered an invalid value. Please try again." << endl;
+	}
+	else if (choice<=0 || choice>=4)
+	{
+		cout << "Sorry, you have entered an invalid package number. Please try again." << endl;
+	}
+
+return 0;
+}
