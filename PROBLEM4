@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    double num1, num2, num3;
+
+	cout << "Please type the first number: ";
+	cin >> num1;
+	cout << "Please type the second number: ";
+	cin >> num2;
+	cout << "Please type the third number: ";
+	cin >> num3;	
+	
+	cout << endl; 
+	
+    if (num1>=num2 && num1>=num3)
+        cout << "The largest of the three numbers is " << num1 << "." << endl;
+    else if (num2>=num1 && num2>=num3)
+        cout << "The largest of the three numbers is " << num2 << "." << endl;
+    else
+        cout << "The largest of the three numbers is " << num3 << "." << endl;
+    
+return 0;
+}
