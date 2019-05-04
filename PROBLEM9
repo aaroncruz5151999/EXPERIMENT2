@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int x, y, rows, columns;
+
+	cout << "Please type how many rows: ";
+	cin >> rows;
+
+	cout << "Please type how many columns: ";
+	cin >> columns;
+	
+    for (x=1; x<=rows; x++)
+	{
+    for (y=1; y<=columns; y++)
+		cout << "*";
+		cout << endl;
+	}
+
+return 0;
+}
